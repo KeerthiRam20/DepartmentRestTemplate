@@ -6,6 +6,6 @@ public interface DepartmentService {
 	
     DepartmentDto saveDepartment(DepartmentDto department);
 
-    DepartmentDto getDepartmentById(int departmentId);
+    DepartmentDto getDepartmentById(int id);
 }
 

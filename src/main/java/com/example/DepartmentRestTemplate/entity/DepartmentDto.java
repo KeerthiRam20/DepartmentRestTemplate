@@ -6,11 +6,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
 @Entity
 @Table(name = "departments")
 public class DepartmentDto{
@@ -18,17 +13,17 @@ public class DepartmentDto{
 	
 	   @Id
 	    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	    private int departmentId;
+	    private int id;
 	    private String departmentName;
 	    private String departmentAddress;
 	    private String departmentCode;
 	    
 	   
 		public int getId() {
-			return departmentId;
+			return id;
 		}
 		public void setId(int id) {
-			this.departmentId = id;
+			this.id = id;
 		}
 		public String getDepartmentName() {
 			return departmentName;
@@ -54,14 +49,14 @@ public class DepartmentDto{
 		}
 		
 		public DepartmentDto(int id, String departmentName, String departmentAddress, String departmentCode) {
-			this.departmentId = id;
+			this.id = id;
 			this.departmentName = departmentName;
 			this.departmentAddress = departmentAddress;
 			this.departmentCode = departmentCode;
 		}
 		@Override
 		public String toString() {
-			return "DepartmentDto [departmentId=" + departmentId + ", departmentName=" + departmentName
+			return "DepartmentDto [id=" + id + ", departmentName=" + departmentName
 					+ ", departmentAddress=" + departmentAddress + ", departmentCode=" + departmentCode + "]";
 		}
 	    
